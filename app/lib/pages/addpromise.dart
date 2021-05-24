@@ -102,7 +102,7 @@ class _AddPromiseState extends State<AddPromise> {
     );
   }
   final contentController = TextEditingController();
-  var contentController2 = TextEditingController();
+  final contentController2 = TextEditingController();
   final contentController3 = TextEditingController();
   final contentController4 = TextEditingController();
   final _category = ['스터디', '이벤트', '운동'];
@@ -344,7 +344,7 @@ class _AddPromiseState extends State<AddPromise> {
   void _addProm(Prom prom) {
     FirebaseFirestore.instance
         .collection('promises')
-        .add({'title': prom.promise_title, 'promise': prom.promise, 'select_place' : prom.select_place, 'num' : prom.select_num, 'repeat' : prom.repeat});
+        .add({'title': prom.promise_title, 'contents': prom.promise, 'location' : prom.select_place, 'num' : prom.select_num, 'repeat' : prom.repeat});
       //, 'place' : prom.place, 'date' : prom.date});
     //, this.select_place, this.select_num, this.repeat, this.place, this.date
 
